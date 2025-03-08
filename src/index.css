@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  transition: all cubic-bezier(0.23, 1, 0.32, 1) 1s;
+  background-color: black;
+  color: white;
+}
+
+canvas {
+  pointer-events: none;
+}
+
+span.growing {
+  background-color: red;
+}
+
+
+html, body {
+  overflow: hidden;
+}
+
+[data-scroll-container] {
+  overflow: hidden;
+}

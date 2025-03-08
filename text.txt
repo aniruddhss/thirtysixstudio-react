@@ -1,0 +1,18 @@
+this is how we animate here, the first 150 images are loaded and they are like frames of a single 3d element 
+const [index, setIndex] = useState({value:0});
+
+    const canvasRef = useRef(null);
+
+    useGSAP(()=>{
+        gsap.to(index,{
+            value:149,
+            duration:3,
+            repeat:-1,
+            ease:"linear",
+            onUpdate:()=>{
+                setIndex({value:Math.round(index.value)})
+            },
+        });
+    });
+
+    this function allows us to load the first 150 images one after the other to create a animation effefct
